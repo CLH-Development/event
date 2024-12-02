@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Planner</h1>
+        <div class="navigation-buttons">
+            <button id="prevWeek">Semaine précédente</button>
+            <button id="currentWeek">Semaine actuelle</button>
+            <button id="nextWeek">Semaine suivante</button>
+        </div>
+        <div class="calendar-grid">
+            <div class="time-column">
+                <div class="time-header"></div>
+                <div class="time-slots">
+                    <div class="time-slot">8:00</div>
+                    <div class="time-slot">9:00</div>
+                    <div class="time-slot">10:00</div>
+                    <div class="time-slot">11:00</div>
+                    <div class="time-slot">12:00</div>
+                    <div class="time-slot">13:00</div>
+                    <div class="time-slot">14:00</div>
+                    <div class="time-slot">15:00</div>
+                    <div class="time-slot">16:00</div>
+                    <div class="time-slot">17:00</div>
+                    <div class="time-slot">18:00</div>
+                    <div class="time-slot">19:00</div>
+                    <div class="time-slot">20:00</div>
+                    <div class="time-slot">21:00</div>
+                    <div class="time-slot">22:00</div>
+                    <div class="time-slot">23:00</div>
+                    <div class="time-slot">00:00</div>
+                </div>
+            </div>
+            <div class="days-container">
+                <div class="day-column">
+                    <div class="day-header">TUESDAY 18</div>
+                    <div class="events-container"></div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">WEDNESDAY 19</div>
+                    <div class="events-container"></div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">TUESDAY 20</div>
+                    <div class="events-container"></div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">WEDNESDAY 21</div>
+                    <div class="events-container"></div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">THURSDAY 22</div>
+                    <div class="events-container"></div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">FRIDAY 23</div>
+                    <div class="events-container"></div>
+                </div>
+                <div class="day-column">
+                    <div class="day-header">SATURDAY 24</div>
+                    <div class="events-container"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-section">
+            <div class="goals">
+                <h2>GOALS</h2>
+                <div class="goals-content" contenteditable="true"></div>
+            </div>
+            <div class="notes">
+                <h2>NOTES</h2>
+                <div class="notes-content" contenteditable="true">
+                    • commentaires blancs
+                    • poster a 18h
+                    • faire des nouvelles photos instas
+                </div>
+            </div>
+            <div class="priorities">
+                <h2>PRIORITIES</h2>
+                <div class="priorities-content" contenteditable="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <form id="event-form">
+                <div class="form-group">
+                    <label for="event-time">Horaire</label>
+                    <select id="event-time" required>
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                        <option value="21:00">21:00</option>
+                        <option value="22:00">22:00</option>
+                        <option value="23:00">23:00</option>
+                        <option value="00:00">00:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="event-title">Titre</label>
+                    <input type="text" id="event-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-subtitle">Sous-titre</label>
+                    <input type="text" id="event-subtitle">
+                </div>
+                <div class="form-group">
+                    <label for="event-notes">Notes supplémentaires</label>
+                    <textarea id="event-notes" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Couleur</label>
+                    <div class="color-palette">
+                        <button type="button" class="color-option" data-color="#FFD6E5" style="background-color: #FFD6E5"></button>
+                        <button type="button" class="color-option" data-color="#FFE5D6" style="background-color: #FFE5D6"></button>
+                        <button type="button" class="color-option" data-color="#FFFFD6" style="background-color: #FFFFD6"></button>
+                        <button type="button" class="color-option" data-color="#D6FFE5" style="background-color: #D6FFE5"></button>
+                        <button type="button" class="color-option" data-color="#D6FFFF" style="background-color: #D6FFFF"></button>
+                        <button type="button" class="color-option" data-color="#D6E5FF" style="background-color: #D6E5FF"></button>
+                        <button type="button" class="color-option" data-color="#FFD6FF" style="background-color: #FFD6FF"></button>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" id="cancel-event">Annuler</button>
+                    <button type="submit" id="save-event">Sauvegarder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
